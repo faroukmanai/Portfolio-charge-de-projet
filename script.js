@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <h1 class="card-title">${item.title}</h1>
                             <p class="card-sub-title">${item.subTitle}</p>
                             <small>${item.year}</small>
-                            <p class="card-info">${item.info}</p>
+                            <p class="card-info"> Contribution : <br> ${item.info}</p>
                         </div>
                     </div>
                 `;
