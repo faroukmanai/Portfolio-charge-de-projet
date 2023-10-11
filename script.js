@@ -28,6 +28,31 @@ TweenMax.from(".job-name a",1, {
     ease: Expo.easeInOut
 })
 document.addEventListener("DOMContentLoaded", function() {
+
+    // Fonction pour gérer le défilement fluide
+        function smoothScroll(event, targetId) {
+            event.preventDefault(); // Empêchez le comportement par défaut du lien
+            const targetSection = document.getElementById(targetId);
+            targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+
+        // Obtenez le lien "À propos" et "Projets"
+        const aboutLink = document.querySelector('a[href="#about"]');
+        const projectLink = document.querySelector('a[href="#projects"]');
+
+        // Ajoutez un écouteur d'événements
+        aboutLink.addEventListener("click", function(e) {
+            smoothScroll(e, "about");
+        });
+
+        // Écouteur d'événements pour "Projets"
+        projectLink.addEventListener("click", function(e) {
+            smoothScroll(e, "projects");
+        });
+
     // Fetch data from JSON file
     fetch('./data.json')
         .then(response => response.json())

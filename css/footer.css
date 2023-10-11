@@ -1,0 +1,14 @@
+footer{
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    gap:30px;
+    color: antiquewhite;
+}
+footer a{
+    text-decoration: none;
+    color: #232b3f;
+    font-size: 12px;
+    padding:3px 5px;
+    background-color: antiquewhite;
+}
