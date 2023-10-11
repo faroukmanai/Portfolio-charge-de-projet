@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Obtenez le lien "À propos" et "Projets"
         const aboutLink = document.querySelector('a[href="#about"]');
         const projectLink = document.querySelector('a[href="#projects"]');
+        const contactLink = document.querySelector('a[href="#contact"]');
 
         // Ajoutez un écouteur d'événements
         aboutLink.addEventListener("click", function(e) {
@@ -51,6 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
         // Écouteur d'événements pour "Projets"
         projectLink.addEventListener("click", function(e) {
             smoothScroll(e, "projects");
+        });
+
+        // Écouteur d'événements pour "contact"
+        contactLink.addEventListener("click", function(e) {
+            smoothScroll(e, "contact");
         });
 
     // Fetch data from JSON file

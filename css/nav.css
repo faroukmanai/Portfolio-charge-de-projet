@@ -31,3 +31,10 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+
+@media (max-width: 480px) {
+    nav ul{
+        gap:25px;
+        font-size: 16px;
+    }
+}
